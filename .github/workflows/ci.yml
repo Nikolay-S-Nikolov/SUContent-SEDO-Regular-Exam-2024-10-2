@@ -23,7 +23,7 @@ jobs:
       run: dotnet build --no-restore
     - name: Run integration tests only
       if: github.ref == 'refs/heads/staging'
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test Homes.IntegrationTests --no-build --verbosity normal
     - name: Run unit tests only
       if: github.ref == 'refs/heads/develop'
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test Homies.UnitTests --no-build --verbosity normal
